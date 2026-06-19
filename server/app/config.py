@@ -133,7 +133,7 @@ _flag_ids = urlsplit(pick(
 _team_token = pick(GAME.get('team_token'), 'SYSTEM_TOKEN', 'your_secret_token')
 
 CONFIG = {
-    'DEBUG': os.environ.get('DEBUG', 'False'),
+    'DEBUG': as_bool(os.environ.get('DEBUG', 'False')),
 
     # The clients run sploits on TEAMS and the FLAG_FORMAT regex scrapes flags
     # from the sploits' stdout.
